@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Quiz System</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="warning-banner" id="warningBanner">
+        ⚠️ WARNING: Cheating detected! Quiz will be auto-submitted if you continue.
+        
+    </div>
+
+    <button class="fullscreen-btn" onclick="enterFullscreen()">📺 Fullscreen Mode</button>
+
+    <div class="container">
+        <!-- Login Form -->
+        <div class="card" id="loginForm">
+            <h1>🔒 Secure Quiz System</h1>
+            
+            <div class="form-group">
+                <label for="studentName">👤 Full Name *</label>
+                <input type="text" id="studentName" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="studentEmail">📧 Email Address *</label>
+                <input type="email" id="studentEmail" required placeholder="Enter your email address">
+            </div>
+            <button class="btn" onclick="startQuiz()">🚀 Start Quiz</button>
+            <a href="https://dipayan-dey.github.io/portfolio/" target="_blank" style="text-decoration: none; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #2e7d32; "><h3 style="text-align: center; margin-top: 20px;">Design By Dipayan Dey</h3></a>
+        </div>
+
+        <!-- Quiz Container -->
+        <div class="quiz-container card" id="quizContainer">
+            <div class="quiz-header">
+                <div>
+                    <h2>📝 Assessment Quiz</h2>
+                    <div id="studentInfo"></div>
+                </div>
+                <div class="timer">
+                    ⏰ <span id="timeLeft">30:00</span>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-number" id="questionNumber">Question 1 of 10</div>
+                <div class="question-text" id="questionText"></div>
+                <div class="options" id="optionsContainer"></div>
+            </div>
+
+            <div class="navigation">
+                <button class="btn" id="prevBtn" onclick="previousQuestion()" disabled>⬅️ Previous</button>
+                <button class="btn" id="nextBtn" onclick="nextQuestion()">Next ➡️</button>
+                <button class="btn" id="submitBtn" onclick="submitQuiz()" style="display: none;">✅ Submit Quiz</button>
+            </div>
+             <a href="https://dipayan-dey.github.io/portfolio/" target="_blank" style="text-decoration: none; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #ea1313;  "><h3 style="text-align: center;margin-top: 20px;">Design By Dipayan Dey</h3></a>
+        </div>
+
+        <!-- Results Container -->
+        <div class="results-container card" id="resultsContainer">
+            <h1>🎉 Quiz Completed!</h1>
+            <div class="score-display" id="scoreDisplay"></div>
+            <div id="resultDetails"></div>
+            <button class="btn" onclick="downloadResults()">📊 Download Results</button>
+            <button class="btn" onclick="manualWhatsAppSend()" style="margin-top: 15px;">📱 Resend to WhatsApp</button>
+        </div>
+
+        <!-- Admin Panel -->
+        <div class="admin-panel" id="adminPanel">
+            <h3>🔧 Admin Panel</h3>
+            <button class="btn" onclick="showAdmin()">View All Results</button>
+            <button class="btn" onclick="exportAllResults()">Export All Results</button>
+            <div id="allResults" style="margin-top: 20px;"></div>
+        </div>
+    </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
