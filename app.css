@@ -290,10 +290,10 @@
                  margin-top: 20px;
             background: linear-gradient(135deg, #00d4ff, #0099cc);
             border: none;
-            padding: 1rem 2rem;
+            padding: 1rem 1rem;
             border-radius: 15px;
             color: white;
-            font-weight: 600;
+            font-weight: 400;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -306,3 +306,13 @@
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
         }
+  .hide{
+            display: none;
+            /* padding: 5px;
+            background: #00d4ff;
+            border-radius: 20px; */
+        }
+        .resume-download-btn:hover + .hide {
+  display: block;
+  color: red;
+}
