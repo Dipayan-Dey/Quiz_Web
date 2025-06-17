@@ -1,54 +1,54 @@
-        // Quiz Data
+// Quiz Data
         const questions = [
             {
                 question: "What is the full form of POP in programming?",
-                options: ["Popular Oriented Programming", "Proper Object Programming", " Procedural Oriented Programming", "Precompiled Object Program"],
-                correct: 3
+                options: ["Popular Oriented Programming", "Proper Object Programming", "Procedural Oriented Programming", "Precompiled Object Program"],
+                correct: 2  // Updated to match "Procedural Oriented Programming" (index 2)
             },
             {
-                question: " Which of the following languages is easier for humans to understand?",
-                options: ["Low Level", "High Level", " Binary Code", "Assembly"],
-                correct: 2
+                question: "Which of the following languages is easier for humans to understand?",
+                options: ["Low Level", "High Level", "Binary Code", "Assembly"],
+                correct: 1  // Updated to match "High Level" (index 1)
             },
             {
                 question: "What is the purpose of a translator in programming?",
-                options: ["Convert machine code to Englis", "Compile and run games", " Convert human-readable code to machine code", " Write code for the programmer"],
-                correct: 3
+                options: ["Convert machine code to English", "Compile and run games", "Convert human-readable code to machine code", "Write code for the programmer"],
+                correct: 2  // Updated to match "Convert human-readable code to machine code" (index 2)
             },
             {
                 question: "Which is an example of an interpreted language?",
                 options: ["Java", "Python", "Dart", "C++"],
-                correct: 2
+                correct: 1  // Updated to match "Python" (index 1)
             },
             {
                 question: "In object-oriented programming, a car is an example of a ?",
                 options: ["Variable", "Object", "Loop", "Function"],
-                correct: 2
+                correct: 1  // Updated to match "Object" (index 1)
             },
             {
                 question: "What is the main difference between compiled and interpreted languages?",
-                options: [" Interpreted languages are faster", "Compiled languages are translated all at once; interpreted line-by-line", " Compiled languages only run on Windows", "Interpreted languages cannot use functions"],
-                correct: 2
+                options: ["Interpreted languages are faster", "Compiled languages are translated all at once; interpreted line-by-line", "Compiled languages only run on Windows", "Interpreted languages cannot use functions"],
+                correct: 1  // Updated to match the correct answer (index 1)
             },
             {
                 question: "Which language uses both compilation and interpretation?",
                 options: ["Python", "Java", "C", "Laravel"],
-                correct: 1
+                correct: 1  // Correct - "Java" (index 1)
             },
             {
-                question: "What does a 'medium level language' typically refer to?Which country is home to the Great Wall?",
-                options: [" Close to machine language", "Only used in mobile apps", "Balance between human and machine readability", " Cannot be compiled"],
-                correct: 3
+                question: "What does a 'medium level language' typically refer to?",
+                options: ["Close to machine language", "Only used in mobile apps", "Balance between human and machine readability", "Cannot be compiled"],
+                correct: 2  // Updated to match "Balance between human and machine readability" (index 2)
             },
             {
                 question: "In the hybrid model of translation (like Java), what is the intermediate code called?",
                 options: ["Bytecode", "Assembly", "Binary", "Source code"],
-                correct: 1
+                correct: 0  // Updated to match "Bytecode" (index 0)
             },
             {
                 question: "Why are high-level languages typically slower than low-level languages?",
                 options: ["They need more RAM", "They require external power", "They require translation to machine code before execution", "They run only on virtual machines"],
-                correct: 3
+                correct: 2  // Updated to match "They require translation to machine code before execution" (index 2)
             }
         ];
 
@@ -209,8 +209,7 @@
             document.getElementById('quizContainer').style.display = 'block';
             document.getElementById('studentInfo').innerHTML = `👤 ${name} | 📧 ${email}`;
 
-            // Initialize quiz
-            shuffleQuestions();
+            // Initialize quiz - REMOVED shuffleQuestions() call to keep sequential order
             displayQuestion();
             startTimer();
         }
@@ -220,12 +219,13 @@
             return re.test(email);
         }
 
-        function shuffleQuestions() {
-            for (let i = questions.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [questions[i], questions[j]] = [questions[j], questions[i]];
-            }
-        }
+        // COMMENTED OUT - Questions will now appear in their original order
+        // function shuffleQuestions() {
+        //     for (let i = questions.length - 1; i > 0; i--) {
+        //         const j = Math.floor(Math.random() * (i + 1));
+        //         [questions[i], questions[j]] = [questions[j], questions[i]];
+        //     }
+        // }
 
         function displayQuestion() {
             const q = questions[currentQuestion];
@@ -419,18 +419,18 @@
         }
 
         function getExplanation(questionIndex) {
-            // Add explanations for each question (you can customize these)
+            // Updated explanations to match the programming quiz questions
             const explanations = [
-                "💡 Paris is the capital and most populous city of France.",
-                "💡 Mars appears red due to iron oxide (rust) on its surface.",
-                "💡 Basic arithmetic: 2 + 2 = 4",
-                "💡 Leonardo da Vinci painted the Mona Lisa between 1503-1519.",
-                "💡 The Pacific Ocean covers about 46% of the world's water surface.",
-                "💡 Nitrogen makes up about 78% of Earth's atmosphere.",
-                "💡 Cheetahs can reach speeds up to 70 mph (112 km/h).",
-                "💡 The Great Wall of China was built over many centuries starting from the 7th century BC.",
-                "💡 2 is the smallest and only even prime number.",
-                "💡 William Shakespeare wrote Romeo and Juliet around 1594-1596."
+                "💡 POP stands for Procedural Oriented Programming - a programming paradigm that follows a top-down approach.",
+                "💡 High-level languages are easier for humans to understand as they use English-like syntax and abstract away machine details.",
+                "💡 A translator converts human-readable source code into machine code that the computer can execute.",
+                "💡 Python is an interpreted language - code is executed line by line at runtime rather than compiled beforehand.",
+                "💡 In OOP, a car would be an Object - an instance of a class with properties and methods.",
+                "💡 Compiled languages translate the entire code at once before execution, while interpreted languages translate line by line during execution.",
+                "💡 Java uses both compilation (to bytecode) and interpretation (bytecode to machine code via JVM).",
+                "💡 Medium-level languages balance human readability with machine efficiency, like C language.",
+                "💡 In Java's hybrid model, source code is compiled to bytecode, which is then interpreted by the JVM.",
+                "💡 High-level languages are slower because they need translation/interpretation steps before execution, unlike low-level languages."
             ];
             
             return explanations[questionIndex] || "💡 Review this concept for better understanding.";
@@ -609,6 +609,7 @@ Generated by Dipayan Dey
         function exportAllResults() {
             downloadResults();
         }
+        
         document.addEventListener('DOMContentLoaded', function() {
             // Show admin panel if accessed with admin parameter
             if (window.location.search.includes('admin=true')) {
