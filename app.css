@@ -287,6 +287,7 @@
             text-align: center;
         }
           .resume-download-btn {
+                 margin-top: 20px;
             background: linear-gradient(135deg, #00d4ff, #0099cc);
             border: none;
             padding: 1rem 2rem;
