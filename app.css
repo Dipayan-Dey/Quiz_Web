@@ -286,3 +286,22 @@
             font-size: 2rem;
             text-align: center;
         }
+          .resume-download-btn {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .resume-download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+        }
