@@ -1,54 +1,54 @@
 // Quiz Data
         const questions = [
             {
-                question: "What is the full form of POP in programming?",
-                options: ["Popular Oriented Programming", "Proper Object Programming", "Procedural Oriented Programming", "Precompiled Object Program"],
+                question: "Who developed the C programming language?",
+                options: ["Bjarne Stroustrup", "Dennis Ritchie", "James Gosling", "Ken Thompson"],
                 correct: 2  // Updated to match "Procedural Oriented Programming" (index 2)
             },
             {
-                question: "Which of the following languages is easier for humans to understand?",
-                options: ["Low Level", "High Level", "Binary Code", "Assembly"],
+                question: "What is the correct file extension for a C source file?",
+                options: [".c", ".exe", ".db", ".cpp"],
                 correct: 1  // Updated to match "High Level" (index 1)
             },
             {
-                question: "What is the purpose of a translator in programming?",
-                options: ["Convert machine code to English", "Compile and run games", "Convert human-readable code to machine code", "Write code for the programmer"],
-                correct: 2  // Updated to match "Convert human-readable code to machine code" (index 2)
+                question: "What does #include <stdio.h> do in a C program?",
+                options: ["Starts the main function", "Defines a constant", " Includes standard input/output functions", "Declares a variable"],
+                correct: 3  // Updated to match "Convert human-readable code to machine code" (index 2)
             },
             {
-                question: "Which is an example of an interpreted language?",
-                options: ["Java", "Python", "Dart", "C++"],
+                question: "Which function is used to Print some message in C?",
+                options: ["print()", "input()", "cin", "scanf()"],
                 correct: 1  // Updated to match "Python" (index 1)
             },
             {
-                question: "In object-oriented programming, a car is an example of a ?",
-                options: ["Variable", "Object", "Loop", "Function"],
-                correct: 1  // Updated to match "Object" (index 1)
+                question: "Which of the following is a valid main() function declaration in C?",
+                options: ["main[]", "main()", "int main()", "void main[]"],
+                correct: 3  // Updated to match "Object" (index 1)
             },
             {
-                question: "What is the main difference between compiled and interpreted languages?",
-                options: ["Interpreted languages are faster", "Compiled languages are translated all at once; interpreted line-by-line", "Compiled languages only run on Windows", "Interpreted languages cannot use functions"],
-                correct: 1  // Updated to match the correct answer (index 1)
+                question: "What is the purpose of return 0; in the main() function?",
+                options: [" Prints the output", " Stops the program", "Indicates successful execution", "Declares a variable"],
+                correct: 3  // Updated to match the correct answer (index 1)
             },
             {
-                question: "Which language uses both compilation and interpretation?",
-                options: ["Python", "Java", "C", "Laravel"],
-                correct: 1  // Correct - "Java" (index 1)
+                question: "What does an assembler do?",
+                options: [" Converts machine code into human language", "Compiles C code into object code", "Converts assembly language into machine code", " Translates Java into bytecode"],
+                correct: 3  // Correct - "Java" (index 1)
             },
             {
-                question: "What does a 'medium level language' typically refer to?",
-                options: ["Close to machine language", "Only used in mobile apps", "Balance between human and machine readability", "Cannot be compiled"],
-                correct: 2  // Updated to match "Balance between human and machine readability" (index 2)
+                question: "Which of the following memory segments in C is automatically managed by the compiler and grows downward in memory?",
+                options: ["Code", "Data", "Heap", "Stack"],
+                correct: 4  // Updated to match "Balance between human and machine readability" (index 2)
             },
             {
-                question: "In the hybrid model of translation (like Java), what is the intermediate code called?",
-                options: ["Bytecode", "Assembly", "Binary", "Source code"],
-                correct: 0  // Updated to match "Bytecode" (index 0)
+                question: "Which memory segment in C is used to store global and static variables that are uninitialized?",
+                options: ["Code/Text Segment", "Data Segment", "Heap Segment", "BSS Segment"],
+                correct: 4  // Updated to match "Bytecode" (index 0)
             },
             {
-                question: "Why are high-level languages typically slower than low-level languages?",
-                options: ["They need more RAM", "They require external power", "They require translation to machine code before execution", "They run only on virtual machines"],
-                correct: 2  // Updated to match "They require translation to machine code before execution" (index 2)
+                question: "Where is the string literal 'Hello, World!\n' stored during the execution of a C program?",
+                options: ["Stack Segment", "Heap Segment", "Code Segment", "Data Segment (read-only)"],
+                correct: 4  // Updated to match "They require translation to machine code before execution" (index 2)
             }
         ];
 
@@ -644,12 +644,12 @@ Generated by Dipayan Dey
             }
         });
 
-       function downloadanserkey() {
-    const cvPath = 'ass1 ans.pdf'; // <-- Replace with your actual file path
-    const a = document.createElement('a');
-    a.href = cvPath;
-    a.download = 'AnswerKey.pdf';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-}
+//        function downloadanserkey() {
+//     const cvPath = 'ass1 ans.pdf'; // <-- Replace with your actual file path
+//     const a = document.createElement('a');
+//     a.href = cvPath;
+//     a.download = 'AnswerKey.pdf';
+//     document.body.appendChild(a);
+//     a.click();
+//     document.body.removeChild(a);
+// }
